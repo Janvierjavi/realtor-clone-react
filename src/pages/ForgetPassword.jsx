@@ -12,7 +12,7 @@ export default function ForgetPasssword() {
     e.preventDefault();
     try {
       const auth = getAuth();
-      await sendPasswordResetEmail;
+      await sendPasswordResetEmail(auth, email);
       toast.success("Email was sent.. pls check");
     } catch (error) {
       toast.error("could not send the reset password");
