@@ -10,6 +10,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import PricateRoute from "./components/PricateRoute";
 import CreateListing from "./pages/CreateListing";
+import EditListing from "./pages/EditListing";
 function App() {
   return (
     <>
@@ -25,6 +26,10 @@ function App() {
           <Route path="/create-listing" element={<PricateRoute />}>
             <Route path="/create-listing" element={<CreateListing />} />
           </Route>
+          <Route path="/edit-listing" element={<PricateRoute />}>
+            <Route path="/edit-listing/:listingId" element={<EditListing />} />
+          </Route>
+
           <Route path="sign-in" element={<SignIn />} />
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/forget-password" element={<ForgetPassword />} />
