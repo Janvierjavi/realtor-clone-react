@@ -11,6 +11,7 @@ import "react-toastify/dist/ReactToastify.css";
 import PricateRoute from "./components/PricateRoute";
 import CreateListing from "./pages/CreateListing";
 import EditListing from "./pages/EditListing";
+import Listing from "./pages/Listing";
 function App() {
   return (
     <>
@@ -19,6 +20,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/offer" element={<Offer />} />
+          <Route
+            path="/category/:categoryName/:listingId"
+            element={<Listing />}
+          />
 
           <Route path="/profile" element={<PricateRoute />}>
             <Route path="/profile" element={<Profile />} />
