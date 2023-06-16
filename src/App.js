@@ -12,6 +12,7 @@ import PricateRoute from "./components/PricateRoute";
 import CreateListing from "./pages/CreateListing";
 import EditListing from "./pages/EditListing";
 import Listing from "./pages/Listing";
+import Category from "./pages/Category";
 function App() {
   return (
     <>
@@ -20,6 +21,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/offer" element={<Offer />} />
+          <Route path="/category/:categoryName" element={<Category />} />
+
           <Route
             path="/category/:categoryName/:listingId"
             element={<Listing />}
